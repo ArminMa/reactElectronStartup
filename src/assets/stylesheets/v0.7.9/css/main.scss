@@ -1,0 +1,202 @@
+//colors
+$color_cornflower_blue_approx: rgb(102, 153, 255);
+$color_black_haze_approx: rgb(247, 247, 247);
+$color_gallery_approx: rgb(238, 238, 238);
+$color_seagull_approx: rgb(133, 201, 222);
+$color_alabaster_approx: rgb(252, 252, 252);
+$white: rgb(255, 255, 255);
+$color_silver_chalice_approx: rgb(170, 170, 170);
+$color_science_blue_approx: rgb(0, 116, 217);
+$color_malachite_approx: rgb(46, 204, 64);
+$color_turquoise_approx: rgb(57, 204, 204);
+$color_ecstasy_approx: rgb(255, 133, 27);
+$color_red_orange_approx: rgb(255, 65, 54);
+$color_alto_approx: rgb(221, 221, 221);
+
+.img-container {
+  background-color: $color_black_haze_approx;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: inset 0 0 5px $color_gallery_approx;
+  height: 344px;
+  > img {
+    max-width: 100%;
+    max-height: inherit;
+  }
+}
+.img-preview {
+  background-color: $color_black_haze_approx;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+#imgOriginalDiv {
+  padding-top: 3.5%;
+}
+.img-preview-sm {
+  height: 90px;
+  width: 160px;
+}
+.img-preview-xs {
+  height: 36px;
+  width: 64px;
+}
+.docs-btn-group {
+  .input-group {
+    margin-bottom: 10px;
+  }
+  .button-group > .btn {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}
+.docs-toolbar {
+  margin-top: 10px;
+  margin-bottom: -10px;
+  text-align: center;
+  .docs-tooltip {
+    display: block;
+    margin: -6px -12px;
+    padding: 6px 12px;
+  }
+}
+.docs-data-url {
+  .btn {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  textarea {
+    margin-bottom: 10px;
+  }
+  img {
+    max-height: 174px;
+  }
+}
+.docs-flip-horizontal {
+  //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+  transform: scale(-1, 1);
+}
+.docs-footer {
+  border-top: 1px solid $color_gallery_approx;
+  margin-top: 100px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+code {
+  white-space: normal;
+}
+.docs-navbar-top {
+  margin-bottom: 0;
+  .navbar-toggle {
+    border-color: $color_seagull_approx;
+    .icon-bar {
+      background-color: $color_seagull_approx;
+    }
+  }
+  .nav > li > a {
+    border-top: 1px solid transparent;
+    &:hover {
+      border-color: $color_seagull_approx;
+      background-color: $color_alabaster_approx;
+    }
+  }
+}
+@media(max-width: 767px) {
+  .docs-navbar-top .nav > li > a {
+    border-top: 0;
+    border-left: 1px solid transparent;
+  }
+}
+.docs-jumbotron {
+  background-color: $color_seagull_approx;
+  color: $white;
+}
+@media(min-width: 992px) {
+  .docs-sidebar.fixed {
+    position: fixed;
+    top: 20px;
+  }
+}
+.docs-sidebar {
+  .back-to-top {
+    margin-top: 5px;
+    padding-left: 11px;
+    font-size: 12px;
+  }
+  .nav > li > a {
+    border-left: 1px solid transparent;
+    padding: 4px 10px;
+    &:hover {
+      border-color: $color_seagull_approx;
+      background-color: $color_alabaster_approx;
+    }
+  }
+}
+.docs-alert {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  height: 0;
+  text-align: center;
+  opacity: 0.9;
+  .message {
+    display: inline-block;
+    padding: 5px 10px;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 2px;
+    background-color: $color_silver_chalice_approx;
+    color: $white;
+  }
+  .primary {
+    background-color: $color_science_blue_approx;
+  }
+  .success {
+    background-color: $color_malachite_approx;
+  }
+  .info {
+    background-color: $color_turquoise_approx;
+  }
+  .warning {
+    background-color: $color_ecstasy_approx;
+  }
+  .danger {
+    background-color: $color_red_orange_approx;
+  }
+}
+.fixed-dragger-cropper {
+  max-height: 354px;
+  overflow: hidden;
+  > img {
+    width: 100%;
+  }
+}
+.prettyprint {
+  border: 1px solid $color_alto_approx !important;
+  padding: 10px 15px !important;
+}
+.docs-overview h3 {
+  border-left: 1px solid $color_cornflower_blue_approx;
+  padding-left: 5px;
+}
+.docs-getting-started h4 {
+  border-left: 1px solid $color_cornflower_blue_approx;
+  padding-left: 5px;
+  padding-left: 8px;
+}
+.docs-data > .input-group {
+  margin-bottom: 10px;
+  > label {
+    min-width: 80px;
+  }
+  > span {
+    min-width: 50px;
+  }
+}
+.bootstrap-modal-cropper img {
+  width: 100%;
+}
